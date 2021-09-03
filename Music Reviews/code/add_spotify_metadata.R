@@ -23,8 +23,8 @@ p_load(data.table, magrittr, stringr, ggplot2
 ### Set spotifyr parameters ----
 ##################-
 
-Sys.setenv(SPOTIFY_CLIENT_ID = 'e3bbe48bfe0b4c0c8fdd9a05de718cf7')
-Sys.setenv(SPOTIFY_CLIENT_SECRET = '4ab2d8c2e2824be1990908cf869d30c5')
+Sys.setenv(SPOTIFY_CLIENT_ID = 'mykey')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = 'mysecret')
 
 review_response_sheet = "https://docs.google.com/spreadsheets/d/1jGTVQpdzbn97j7C4Fw6VWgeWBlSk7lGQfUMGEBQqmyY"
 review_storage_sheet = "https://docs.google.com/spreadsheets/d/1oSKe73qycEborK_ZLnfL9524oz41CPwWHw1rdpD6IWs"
