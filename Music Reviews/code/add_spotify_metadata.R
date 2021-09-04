@@ -23,8 +23,10 @@ p_load(data.table, magrittr, stringr, ggplot2
 ### Set spotifyr parameters ----
 ##################-
 
-Sys.setenv(SPOTIFY_CLIENT_ID = 'mykey')
-Sys.setenv(SPOTIFY_CLIENT_SECRET = 'mysecret')
+sp_client = rstudioapi::askForPassword("Client ID")
+sp_secret = rstudioapi::askForPassword("Client Secret")
+Sys.setenv(SPOTIFY_CLIENT_ID = sp_client)
+Sys.setenv(SPOTIFY_CLIENT_SECRET = sp_secret)
 
 review_response_sheet = "https://docs.google.com/spreadsheets/d/1jGTVQpdzbn97j7C4Fw6VWgeWBlSk7lGQfUMGEBQqmyY"
 review_storage_sheet = "https://docs.google.com/spreadsheets/d/1oSKe73qycEborK_ZLnfL9524oz41CPwWHw1rdpD6IWs"
@@ -98,6 +100,22 @@ parse_track = function(track){
 
 parse_uri = function(uri){
   ## Function to extract release data from track and album URIs
+  
+  if(grepl('^https://', uri)){
+    url = uri
+    uri_type = gsub("^https://open.spotify.com/", "", url) %>% 
+      str_split("/") %>% 
+      .[[1]] %>% 
+      .[1]
+    uri_id = gsub("^https://open.spotify.com/", "", url) %>% 
+      str_split("/") %>% 
+      .[[1]] %>% 
+      .[2] %>% 
+      str_split("\\?") %>% 
+      .[[1]] %>% 
+      .[1]
+    uri = paste("spotify", uri_type, uri_id, sep = ":")
+  }
   
   release = get_release(uri)
   
