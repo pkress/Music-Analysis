@@ -132,11 +132,6 @@ parse_uri = function(uri){
   
 }
 
-
-
-
-parsed_data = parse_uri(uri)
-
 extract_review_data = function(reviews){
   ## Take in dt of reviews to process
   
