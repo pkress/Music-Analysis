@@ -7,6 +7,9 @@ A series of scripts to collect and analyze my listening behavior, post reviews, 
 - Add Listening.R will add all scrobbles on last.fm for a public user to a google sheet. 
 - Summarize_Listening.R will create top artist summary tables and charts.
 
+![image](https://user-images.githubusercontent.com/23043791/161195752-5317b3ef-051e-486b-a134-08cb5af8777e.png)
+
+
 ## Other Music Analysis
 
 - add_spotify_metadata.R adds spotify data to music review survey responses given a song, album, or artist url/uri
