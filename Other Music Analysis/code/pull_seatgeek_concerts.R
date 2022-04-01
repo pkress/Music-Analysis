@@ -23,8 +23,8 @@ p_load(data.table, magrittr, stringr, ggplot2
 ##################-
 seatgeek_params = list(
   baseurl = "https://api.seatgeek.com/2/"
-  , client_secret = "e23b5c1c7d6e87644ac74a51f414ae9710c8f0ef77a53123408c4a216ab1b468"
-  , client_id = "MTIyNTI4NTd8MTYyOTk0OTQ5NS44NjE2MDM")
+  , client_secret = Sys.getenv(sg_secret)
+  , client_id = Sys.getenv(sg_id))
 
 location_params = list(
   type = "events"
