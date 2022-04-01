@@ -151,4 +151,4 @@ top_artist_plot = pk_top_art %>%
   coord_flip()+
   theme_bw()
 
-ggsave(plot = top_artist_plot, filename = "intermediate/top_artist_plot.pdf", height = 8, width = 6)
+ggsave(plot = top_artist_plot, filename = "output/plots/top_artist_plot.pdf", height = 8, width = 6)
