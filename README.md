@@ -10,9 +10,13 @@ A series of scripts to collect and analyze my listening behavior, post reviews, 
 ![image](https://user-images.githubusercontent.com/23043791/161195752-5317b3ef-051e-486b-a134-08cb5af8777e.png)
 
 
-## Other Music Analysis
+## Album Reviews
 
 - add_spotify_metadata.R adds spotify data to music review survey responses given a song, album, or artist url/uri
 - add_reviews_to_aoty.R adds music review survey responses to aoty.org comments section.
+
+## Spotify Playlist Creation
 - make_pitchfork_top_200_readers.R takes an html file of top 200 albums ([here](https://pitchfork.com/features/lists-and-guides/peoples-list-25th-anniversary/)) and produces a spotify playlist consisting of those albums. 
+
+## Upcoming Concerts
 - pull_seatgeek_concerts.R pulls upcoming concerts from seatgeek api for chicago. 
