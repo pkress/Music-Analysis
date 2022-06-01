@@ -123,4 +123,4 @@ add_user_func = function(user){
 
 uservec = c("pkress2") %>% #, "mghaight", "nrmclean", "nbennett17", "dakatcher", "adsmithrose", "jeffdillenbeck", "Keriann-Reeves") %>% 
   setNames(.,.)
-lapply(uservec, add_user_func)
+all_data = lapply(uservec, add_user_func)
